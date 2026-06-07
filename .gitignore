@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+incident-report-*.txt
+.env
+*.log

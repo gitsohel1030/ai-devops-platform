@@ -1,0 +1,11 @@
+2026-04-28 06:45:01 INFO  Starting restaurant-service v1.8.0
+2026-04-28 06:45:02 INFO  Loading menu cache from Redis...
+2026-04-28 06:45:03 INFO  Cached 15000 menu items successfully
+2026-04-28 06:45:10 INFO  Processing bulk image resize request (2500 images)
+2026-04-28 06:45:15 WARN  Memory usage at 78% (624MB / 800MB limit)
+2026-04-28 06:45:22 WARN  Memory usage at 91% (728MB / 800MB limit)
+2026-04-28 06:45:28 WARN  Memory usage at 97% (776MB / 800MB limit)
+2026-04-28 06:45:31 ERROR Memory usage at 100% - approaching container limit
+2026-04-28 06:45:33 ERROR OOMKilled: Container exceeded memory limit of 800Mi
+2026-04-28 06:45:33 ERROR Kernel OOM killer terminated the process
+2026-04-28 06:45:33 INFO  Exit code: 137
