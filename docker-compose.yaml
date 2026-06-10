@@ -1,0 +1,24 @@
+services:
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v2.19.0
+    container_name: mlflow-server
+    ports:
+      - "5000:5000"
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_DEFAULT_REGION=ap-south-1
+    volumes:
+      - mlflow-db:/mlflow
+    command: >
+      mlflow server
+      --host 0.0.0.0
+      --port 5000
+      --backend-store-uri sqlite:////mlflow/mlflow.db
+      --default-artifact-root s3://mlflow-artifacts-608827180555/artifacts
+      --serve-artifacts
+
+    restart: unless-stopped
+
+volumes:
+  mlflow-db:

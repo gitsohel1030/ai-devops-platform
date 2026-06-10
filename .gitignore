@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 .venv/
 __pycache__/
 *.pyc
 incident-report-*.txt
 .env
 *.log
+=======
+.env
+*.pyc
+__pycache__/
+.venv/
+venv/*
+venv/
+>>>>>>> 98e8558 (built a foodrush Order Delay Predictor model and tracked with mlflow)
