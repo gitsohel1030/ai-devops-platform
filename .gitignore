@@ -13,3 +13,23 @@ __pycache__/
 venv/*
 venv/
 >>>>>>> 98e8558 (built a foodrush Order Delay Predictor model and tracked with mlflow)
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+*.tfplan
+*.tfvars
+!example.tfvars
+.terraformrc
+terraform.rc
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+crash.log
+crash.*.log
+.vscode/
+.idea/
+.DS_Store
+Thumb.db
+ 
