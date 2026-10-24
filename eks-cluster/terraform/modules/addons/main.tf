@@ -46,23 +46,7 @@ resource "helm_release" "loki" {
   namespace        = "monitoring"
   create_namespace = true
  
-  values = [<<-YAML
-    loki:
-      commonConfig:
-        replication_factor: 1
-      storage:
-        type: filesystem
-    singleBinary:
-      replicas: 1
-    monitoring:
-      selfMonitoring:
-        enabled: false
-      lokiCanary:
-        enabled: false
-    test:
-      enabled: false
-  YAML
-  ]
+  values = [file("${path.module}/loki-values.yaml")]
  
   timeout = 600
 }

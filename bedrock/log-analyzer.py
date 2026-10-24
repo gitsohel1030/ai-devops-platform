@@ -16,7 +16,7 @@ def read_log_file(filepath):
     """
     Read log file from disk.
     In production this would come from:
-    - kubectl logs <pod-name> piped to this script
+    - kubectl logs <pod-name> piped to this scriput
     - Loki API query
     - CloudWatch logs
     """
